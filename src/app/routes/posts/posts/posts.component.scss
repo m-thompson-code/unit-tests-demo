@@ -3,6 +3,10 @@
 	padding: 64px;
 }
 
+p {
+	margin-bottom: 5px;
+}
+
 .json {
 	white-space: pre-wrap;
 	border: 1px solid grey;
@@ -15,12 +19,20 @@
 	background: aliceblue;
 }
 
-.user {
-	/* Tan */
-	background: floralwhite;
+.comments {
+	margin-left: 64px;
+
+	.comment {
+		/* purple */
+		background: thistle;
+	}
 }
 
-.comments {
-	/* Purple */
-	background: thistle;
+.bold {
+	font-weight: 700;
+	background: rgba(0, 0, 0, 0.1);
+	padding: 5px 10px;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	display: inline-block;
 }

@@ -1,13 +1,26 @@
-<button *ngIf="!posts?.length" (click)="getPosts()" mat-raised-button color="primary">Load posts</button>
+<!-- <button *ngIf="!posts?.length" (click)="getPosts()" mat-raised-button color="primary">Load posts</button> -->
 
-<div *ngFor="let post of posts">
-	<div *ngIf="post" class="json post">
+<!-- <div *ngFor="let post of posts$ | async">
+	<div class="json post">
 		<h2>{{ post.title }}</h2>
 
-		<!-- <p>By {{ post.userId }} TODO: user name</p> -->
+		<p>{{ post.body }}</p>
+	</div>
+</div> -->
 
-		<div>
-			<p>{{ post.body }}</p>
+<div *ngFor="let blog of blogs$ | async">
+	<div class="json post">
+		<h2>{{ blog.title }}</h2>
+
+		<div class="bold">By {{ blog.authorName }}</div>
+
+		<p *ngFor="let paragraph of blog.paragraphs">{{ paragraph }}</p>
+
+		<div class="comments">
+			<div class="comment json" *ngFor="let comment of blog.comments">
+				<p class="bold">{{ comment.email }}</p>
+				<p *ngFor="let paragraph of comment.paragraphs">{{ paragraph }}</p>
+			</div>
 		</div>
 	</div>
 </div>
