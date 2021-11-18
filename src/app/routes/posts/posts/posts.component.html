@@ -1,0 +1,13 @@
+<button *ngIf="!posts?.length" (click)="getPosts()" mat-raised-button color="primary">Load posts</button>
+
+<div *ngFor="let post of posts">
+	<div *ngIf="post" class="json post">
+		<h2>{{ post.title }}</h2>
+
+		<!-- <p>By {{ post.userId }} TODO: user name</p> -->
+
+		<div>
+			<p>{{ post.body }}</p>
+		</div>
+	</div>
+</div>

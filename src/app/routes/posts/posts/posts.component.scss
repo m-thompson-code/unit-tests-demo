@@ -1,0 +1,26 @@
+:host {
+	display: block;
+	padding: 64px;
+}
+
+.json {
+	white-space: pre-wrap;
+	border: 1px solid grey;
+	margin: 5px;
+	padding: 5px;
+}
+
+.post {
+	/* Blue */
+	background: aliceblue;
+}
+
+.user {
+	/* Tan */
+	background: floralwhite;
+}
+
+.comments {
+	/* Purple */
+	background: thistle;
+}
